@@ -1025,7 +1025,12 @@ def update_dashboard(start_date, end_date, category, region):
             fig_sunburst, fig_regional, fig_treemap, fig_segments, 
             fig_scatter, fig_margin, fig_waterfall, fig_funnel, insights)
 
+
+server = app.server  # Expose the server variable for deployment
+
 if __name__ == '__main__':
+   #app.run(debug=True, port=8050)
+#if __name__ == '__main__':
     print("🚀 Starting Ultimate Sales Intelligence Dashboard...")
     print("📊 Dashboard will be available at: http://localhost:8050")
     print("✨ Features: ML Forecasting | Customer Segmentation | Real-time Analytics")
