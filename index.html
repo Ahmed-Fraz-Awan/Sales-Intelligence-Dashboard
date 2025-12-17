@@ -25,11 +25,14 @@
             color: #667eea;
             border-bottom: 3px solid #764ba2;
             padding-bottom: 10px;
+            text-align: center;
         }
         
         h2 {
             color: #764ba2;
             margin-top: 30px;
+            border-left: 5px solid #667eea;
+            padding-left: 10px;
         }
         
         .section {
@@ -37,134 +40,34 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 10px;
-            border-left: 5px solid #667eea;
+            border: 1px solid #e0e0e0;
         }
         
-        .badge {
-            background: #667eea;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            margin: 5px;
-            display: inline-block;
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
         }
         
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
+        .team-member {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            border-top: 4px solid #667eea;
+        }
+        
+        .team-member h3 {
+            color: #667eea;
             margin: 10px 0;
         }
         
-        .btn:hover {
-            transform: scale(1.05);
+        .team-member .role {
+            color: #764ba2;
+            font-weight: bold;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- 1. PROJECT TITLE -->
-        <h1>🚀 ULTIMATE SALES INTELLIGENCE DASHBOARD</h1>
-        <p><strong>AI-Powered Analytics • Machine Learning • Business Intelligence</strong></p>
         
-        <!-- 2. TEAM MEMBERS -->
-        <div class="section">
-            <h2>👥 Team Members</h2>
-            <p><strong>Ahmed Fraz Awan</strong> - Developer & Data Analyst</p>
-            <p><em>Single developer project - All code and analysis by Ahmed Fraz Awan</em></p>
-        </div>
-        
-        <!-- 3. PROJECT DESCRIPTION -->
-        <div class="section">
-            <h2>📊 Project Description</h2>
-            <p>This is an interactive sales intelligence dashboard that uses machine learning to provide:</p>
-            <ul>
-                <li>✅ <strong>AI Sales Forecasting</strong> - Predicts next 6 months sales using Random Forest</li>
-                <li>✅ <strong>Customer Segmentation</strong> - Groups customers using RFM analysis and K-Means</li>
-                <li>✅ <strong>Interactive Visualizations</strong> - 12+ chart types including heatmaps, treemaps</li>
-                <li>✅ <strong>Real-time Analytics</strong> - Filter by date, category, region</li>
-                <li>✅ <strong>Business Insights</strong> - AI-generated recommendations</li>
-            </ul>
-            <p>The dashboard helps businesses make data-driven decisions by analyzing sales patterns and predicting future trends.</p>
-        </div>
-        
-        <!-- 4. DATASET DESCRIPTION -->
-        <div class="section">
-            <h2>📁 Dataset Description</h2>
-            <p><strong>Synthetic E-commerce Sales Data</strong></p>
-            <ul>
-                <li><strong>Time Period:</strong> January 2022 - December 2024 (3 years)</li>
-                <li><strong>Records:</strong> 3,000+ sales transactions</li>
-                <li><strong>Categories:</strong> Furniture, Technology, Office Supplies</li>
-                <li><strong>Regions:</strong> East, West, Central, South</li>
-                <li><strong>Features:</strong> Sales, Profit, Quantity, Discount, Customer ID</li>
-                <li><strong>Customer Segments:</strong> Consumer, Corporate, Home Office</li>
-            </ul>
-            <p><em>Data includes realistic seasonal patterns and profit margins.</em></p>
-        </div>
-        
-        <!-- 5. TOOLS AND TECHNOLOGIES -->
-        <div class="section">
-            <h2>🛠️ Tools and Technologies Used</h2>
-            <div>
-                <span class="badge">Python</span>
-                <span class="badge">Dash Framework</span>
-                <span class="badge">Plotly</span>
-                <span class="badge">Scikit-learn</span>
-                <span class="badge">Pandas</span>
-                <span class="badge">NumPy</span>
-                <span class="badge">Bootstrap</span>
-                <span class="badge">Flask</span>
-            </div>
-            
-            <h3>Key Libraries:</h3>
-            <ul>
-                <li><code>dash</code> - For building the web dashboard</li>
-                <li><code>plotly</code> - For interactive charts</li>
-                <li><code>scikit-learn</code> - For machine learning (Random Forest, K-Means)</li>
-                <li><code>pandas</code> - For data analysis</li>
-                <li><code>dash-bootstrap-components</code> - For UI design</li>
-            </ul>
-        </div>
-        
-        <!-- 6. GITHUB REPOSITORY LINK -->
-        <div class="section">
-            <h2>🔗 GitHub Repository</h2>
-            <p>All source code and documentation:</p>
-            <a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard" 
-               class="btn" target="_blank">
-               📂 View Complete Code on GitHub
-            </a>
-            
-            <h3>Direct Links:</h3>
-            <ul>
-                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/DashboardFinal.py">📄 Dashboard Code (DashboardFinal.py)</a></li>
-                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/requirements.txt">📋 Requirements (requirements.txt)</a></li>
-                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/README.md">📖 Documentation (README.md)</a></li>
-            </ul>
-            
-            <h3>How to Run Locally:</h3>
-            <pre style="background: #2d2d2d; color: white; padding: 15px; border-radius: 5px;">
-# Clone repository
-git clone https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard.git
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run dashboard
-python DashboardFinal.py
-
-# Open browser: http://localhost:8050</pre>
-        </div>
-        
-        <!-- FOOTER -->
-        <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #667eea; color: #666;">
-            <p>🎓 <strong>Academic Project</strong> • Developed by Ahmed Fraz Awan • 2024</p>
-            <p><em>Sales Intelligence Dashboard with Machine Learning Integration</em></p>
-        </div>
-    </div>
-</body>
-</html>
