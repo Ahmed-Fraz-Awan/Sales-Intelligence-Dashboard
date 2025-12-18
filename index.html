@@ -67,6 +67,23 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
         
+        .btn-kaggle {
+            background: linear-gradient(135deg, #20BEFF 0%, #0057FF 100%);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-kaggle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(32, 190, 255, 0.4);
+        }
+        
         .team-member {
             background: white;
             padding: 18px;
@@ -134,6 +151,15 @@
             border-left: 4px solid #667eea;
         }
         
+        .code-inline {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
         ul {
             line-height: 1.8;
             padding-left: 20px;
@@ -157,6 +183,43 @@
             text-decoration: underline;
         }
         
+        .dataset-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid #20BEFF;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .dataset-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
         @media (max-width: 768px) {
             body {
                 margin: 15px;
@@ -173,13 +236,21 @@
             .team-col {
                 min-width: 100%;
             }
+            
+            .dataset-stats {
+                gap: 10px;
+            }
+            
+            .stat-item {
+                min-width: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- 1. PROJECT TITLE -->
-        <h1> ULTIMATE SALES INTELLIGENCE DASHBOARD</h1>
+        <h1>🚀 ULTIMATE SALES INTELLIGENCE DASHBOARD</h1>
         <p><strong>AI-Powered Analytics • Machine Learning • Business Intelligence • Interactive Dashboard</strong></p>
         
         <!-- 2. TEAM MEMBERS -->
@@ -210,7 +281,7 @@
             <p>Watch this video to see the dashboard in action with all features demonstrated:</p>
             
             <div class="video-container">
-                <!-- REPLACE THIS WITH YOUR YOUTUBE VIDEO ID -->
+                <!-- YOUR YOUTUBE VIDEO EMBEDDED -->
                 <iframe 
                     src="https://www.youtube.com/embed/boKnCUbXO2I" 
                     title="Sales Intelligence Dashboard Demo" 
@@ -220,17 +291,18 @@
                 </iframe>
             </div>
             
-            <!-- <div class="video-description">
+            <div class="video-description">
                 <h4>📋 Video Contents:</h4>
                 <ul>
-                    <li><strong></strong> - Introduction & Dashboard Overview</li>
-                    <li><strong>1:00-2:30</strong> - AI Sales Forecasting Demonstration</li>
-                    <li><strong>2:30-4:00</strong> - Customer Segmentation Analysis</li>
-                    <li><strong>4:00-5:30</strong> - Interactive Filtering & Real-time Updates</li>
-                    <li><strong>5:30-7:00</strong> - Business Insights & ML Recommendations</li>
-                    <li><strong>7:00-8:00</strong> - Installation & Setup Guide</li>
+                    <li><strong>Introduction</strong> - Project overview and dashboard interface</li>
+                    <li><strong>AI Sales Forecasting</strong> - ML predictions with Random Forest</li>
+                    <li><strong>Customer Segmentation</strong> - RFM analysis with K-Means clustering</li>
+                    <li><strong>Interactive Features</strong> - Real-time filtering and visualizations</li>
+                    <li><strong>Business Insights</strong> - AI-generated recommendations</li>
+                    <li><strong>Technical Details</strong> - Code structure and implementation</li>
                 </ul>
-            </div> -->
+                <p><em>Complete walkthrough of all dashboard features and functionalities.</em></p>
+            </div>
         </div>
         
         <!-- 4. PROJECT DESCRIPTION -->
@@ -250,17 +322,72 @@
         
         <!-- 5. DATASET DESCRIPTION -->
         <div class="section">
-            <h2>📁 Dataset Description</h2>
-            <p><strong>Synthetic E-commerce Sales Data</strong></p>
-            <ul>
-                <li><strong>Time Period:</strong> January 2022 - December 2024 (3 years)</li>
-                <li><strong>Records:</strong> 3,000+ sales transactions</li>
-                <li><strong>Categories:</strong> Furniture, Technology, Office Supplies</li>
-                <li><strong>Regions:</strong> East, West, Central, South</li>
-                <li><strong>Features:</strong> Sales, Profit, Quantity, Discount, Customer ID</li>
-                <li><strong>Customer Segments:</strong> Consumer, Corporate, Home Office</li>
-            </ul>
-            <p><em>Data includes realistic seasonal patterns and profit margins for comprehensive analysis.</em></p>
+            <h2>📁 Dataset Information</h2>
+            
+            <div class="dataset-card">
+                <h3>📊 Comprehensive Synthetic E-commerce Dataset</h3>
+                <p><strong>Source:</strong> Kaggle - <a href="https://www.kaggle.com/datasets/imranalishahh/comprehensive-synthetic-e-commerce-dataset" target="_blank">imranalishahh/comprehensive-synthetic-e-commerce-dataset</a></p>
+                
+                <div class="dataset-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">3,000+</span>
+                        <span class="stat-label">Transactions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">3 Years</span>
+                        <span class="stat-label">Time Period</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">12+</span>
+                        <span class="stat-label">Features</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                </div>
+                
+                <h4>Dataset Features:</h4>
+                <ul>
+                    <li><strong>Order Date</strong> - Timestamp of transactions (2022-2024)</li>
+                    <li><strong>Customer ID</strong> - Unique customer identifiers</li>
+                    <li><strong>Categories</strong> - Furniture, Technology, Office Supplies</li>
+                    <li><strong>Regions</strong> - East, West, Central, South</li>
+                    <li><strong>Customer Segments</strong> - Consumer, Corporate, Home Office</li>
+                    <li><strong>Sales Amount</strong> - Transaction values with realistic ranges</li>
+                    <li><strong>Profit</strong> - Calculated profit margins by category</li>
+                    <li><strong>Quantity</strong> - Number of items purchased</li>
+                    <li><strong>Discount</strong> - Applied discounts (0%, 10%, 15%, 20%)</li>
+                    <li><strong>Seasonal Patterns</strong> - Realistic holiday peaks and summer dips</li>
+                </ul>
+                
+                <h4>📥 Direct Download Access:</h4>
+                <p>Access the dataset directly using Python code:</p>
+                
+                <pre># Method 1: Using kagglehub library
+import kagglehub
+
+# Download the dataset
+path = kagglehub.dataset_download("imranalishahh/comprehensive-synthetic-e-commerce-dataset")
+print("Dataset downloaded to:", path)
+
+# Method 2: Using Kaggle API
+# First install: pip install kaggle
+# Then run:
+# kaggle datasets download imranalishahh/comprehensive-synthetic-e-commerce-dataset
+# unzip comprehensive-synthetic-e-commerce-dataset.zip</pre>
+                
+                <p><strong>Direct Kaggle Link:</strong> <a href="https://www.kaggle.com/datasets/imranalishahh/comprehensive-synthetic-e-commerce-dataset" target="_blank">https://www.kaggle.com/datasets/imranalishahh/comprehensive-synthetic-e-commerce-dataset</a></p>
+                
+                <a href="https://www.kaggle.com/datasets/imranalishahh/comprehensive-synthetic-e-commerce-dataset" 
+                   class="btn-kaggle" target="_blank">
+                   📊 Download Dataset from Kaggle
+                </a>
+                
+                <div style="margin-top: 15px; padding: 10px; background: #e8f4f8; border-radius: 8px; border-left: 4px solid #20BEFF;">
+                    <p><strong>💡 Note:</strong> This dashboard uses a <strong>synthetic version</strong> of the dataset generated programmatically for demonstration purposes. The actual Kaggle dataset contains similar structure and features.</p>
+                </div>
+            </div>
         </div>
         
         <!-- 6. TOOLS AND TECHNOLOGIES -->
@@ -277,6 +404,7 @@
                 <span class="badge">Flask</span>
                 <span class="badge">Git</span>
                 <span class="badge">GitHub Pages</span>
+                <span class="badge">Kaggle API</span>
             </div>
             
             <h3>Key Libraries & Frameworks:</h3>
@@ -288,6 +416,7 @@
                 <li><code>dash-bootstrap-components</code> - Responsive UI components</li>
                 <li><code>numpy</code> - Numerical computing</li>
                 <li><code>flask-caching</code> - Performance optimization</li>
+                <li><code>kagglehub</code> - Dataset downloading from Kaggle</li>
             </ul>
         </div>
         
@@ -338,16 +467,16 @@ python DashboardFinal.py
         
         <!-- FOOTER -->
         <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #667eea; color: #666;">
-            <p>🎓 <strong>Academic Project</strong> • Developed by Ahmed Fraz & Abdullah Atif • 2025</p>
+            <p>🎓 <strong>Academic Project</strong> • Developed by Ahmed Fraz & Abdullah Atif • 2024</p>
             <p><em>Sales Intelligence Dashboard with Machine Learning Integration | Ghulam Ishaq Khan Institute</em></p>
             <p style="font-size: 14px; margin-top: 10px;">
                 This project demonstrates the integration of machine learning, data visualization, and web development 
-                for business intelligence applications.
+                for business intelligence applications. Dataset sourced from Kaggle.
             </p>
         </div>
     </div>
     
-    <script> 
+    <script>
         // Optional: Add smooth scrolling for better UX
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -356,7 +485,7 @@ python DashboardFinal.py
                     behavior: 'smooth'
                 });
             });
-        }); 
-    </script> 
+        });
+    </script>
 </body>
 </html>
