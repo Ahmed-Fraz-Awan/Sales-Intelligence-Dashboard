@@ -12,7 +12,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: rgba(255,255,255,0.95);
             padding: 30px;
@@ -34,58 +34,145 @@
         
         .section {
             background: #f8f9fa;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 12px;
             border-left: 5px solid #667eea;
         }
         
         .badge {
             background: #667eea;
             color: white;
-            padding: 5px 10px;
+            padding: 6px 12px;
             border-radius: 15px;
             margin: 5px;
             display: inline-block;
+            font-size: 14px;
         }
         
         .btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             display: inline-block;
             margin: 10px 0;
+            font-weight: bold;
+            transition: all 0.3s;
         }
         
         .btn:hover {
             transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
         
         .team-member {
             background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
+            padding: 18px;
+            margin: 12px 0;
+            border-radius: 10px;
             border-left: 4px solid #764ba2;
             box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         }
         
         .team-member h4 {
             color: #667eea;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-size: 18px;
         }
         
         .team-row {
             display: flex;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         
         .team-col {
             flex: 1;
-            min-width: 250px;
+            min-width: 280px;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+        
+        .video-description {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #f5576c;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        ul {
+            line-height: 1.8;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                margin: 15px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .team-row {
+                gap: 15px;
+            }
+            
+            .team-col {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -93,7 +180,7 @@
     <div class="container">
         <!-- 1. PROJECT TITLE -->
         <h1>🚀 ULTIMATE SALES INTELLIGENCE DASHBOARD</h1>
-        <p><strong>AI-Powered Analytics • Machine Learning • Business Intelligence</strong></p>
+        <p><strong>AI-Powered Analytics • Machine Learning • Business Intelligence • Interactive Dashboard</strong></p>
         
         <!-- 2. TEAM MEMBERS -->
         <div class="section">
@@ -117,7 +204,37 @@
             <p><em>Collaborative project combining data science and software development skills.</em></p>
         </div>
         
-        <!-- 3. PROJECT DESCRIPTION -->
+        <!-- 3. VIDEO WALKTHROUGH -->
+        <div class="section">
+            <h2>🎥 Video Walkthrough Demonstration</h2>
+            <p>Watch this video to see the dashboard in action with all features demonstrated:</p>
+            
+            <div class="video-container">
+                <!-- REPLACE THIS WITH YOUR YOUTUBE VIDEO ID -->
+                <iframe 
+                    src="https://www.youtube.com/embed/boKnCUbXO2I" 
+                    title="Sales Intelligence Dashboard Demo" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="video-description">
+                <h4>📋 Video Contents:</h4>
+                <ul>
+                    <li><strong>0:00-1:00</strong> - Introduction & Dashboard Overview</li>
+                    <li><strong>1:00-2:30</strong> - AI Sales Forecasting Demonstration</li>
+                    <li><strong>2:30-4:00</strong> - Customer Segmentation Analysis</li>
+                    <li><strong>4:00-5:30</strong> - Interactive Filtering & Real-time Updates</li>
+                    <li><strong>5:30-7:00</strong> - Business Insights & ML Recommendations</li>
+                    <li><strong>7:00-8:00</strong> - Installation & Setup Guide</li>
+                </ul>
+                <p><em>Replace the video with your actual YouTube link by updating the video ID above.</em></p>
+            </div>
+        </div>
+        
+        <!-- 4. PROJECT DESCRIPTION -->
         <div class="section">
             <h2>📊 Project Description</h2>
             <p>This is an interactive sales intelligence dashboard that uses machine learning to provide:</p>
@@ -127,11 +244,12 @@
                 <li>✅ <strong>Interactive Visualizations</strong> - 12+ chart types including heatmaps, treemaps</li>
                 <li>✅ <strong>Real-time Analytics</strong> - Filter by date, category, region</li>
                 <li>✅ <strong>Business Insights</strong> - AI-generated recommendations</li>
+                <li>✅ <strong>Modern UI/UX</strong> - Glassmorphism design with responsive layout</li>
             </ul>
             <p>The dashboard helps businesses make data-driven decisions by analyzing sales patterns and predicting future trends.</p>
         </div>
         
-        <!-- 4. DATASET DESCRIPTION -->
+        <!-- 5. DATASET DESCRIPTION -->
         <div class="section">
             <h2>📁 Dataset Description</h2>
             <p><strong>Synthetic E-commerce Sales Data</strong></p>
@@ -143,68 +261,103 @@
                 <li><strong>Features:</strong> Sales, Profit, Quantity, Discount, Customer ID</li>
                 <li><strong>Customer Segments:</strong> Consumer, Corporate, Home Office</li>
             </ul>
-            <p><em>Data includes realistic seasonal patterns and profit margins.</em></p>
+            <p><em>Data includes realistic seasonal patterns and profit margins for comprehensive analysis.</em></p>
         </div>
         
-        <!-- 5. TOOLS AND TECHNOLOGIES -->
+        <!-- 6. TOOLS AND TECHNOLOGIES -->
         <div class="section">
             <h2>🛠️ Tools and Technologies Used</h2>
             <div>
-                <span class="badge">Python</span>
+                <span class="badge">Python 3.9+</span>
                 <span class="badge">Dash Framework</span>
                 <span class="badge">Plotly</span>
                 <span class="badge">Scikit-learn</span>
                 <span class="badge">Pandas</span>
                 <span class="badge">NumPy</span>
-                <span class="badge">Bootstrap</span>
+                <span class="badge">Bootstrap 5</span>
                 <span class="badge">Flask</span>
+                <span class="badge">Git</span>
+                <span class="badge">GitHub Pages</span>
             </div>
             
-            <h3>Key Libraries:</h3>
+            <h3>Key Libraries & Frameworks:</h3>
             <ul>
-                <li><code>dash</code> - For building the web dashboard</li>
-                <li><code>plotly</code> - For interactive charts</li>
-                <li><code>scikit-learn</code> - For machine learning (Random Forest, K-Means)</li>
-                <li><code>pandas</code> - For data analysis</li>
-                <li><code>dash-bootstrap-components</code> - For UI design</li>
+                <li><code>dash</code> - Web framework for building interactive dashboards</li>
+                <li><code>plotly</code> - Interactive charting and visualization library</li>
+                <li><code>scikit-learn</code> - Machine learning (Random Forest, K-Means clustering)</li>
+                <li><code>pandas</code> - Data manipulation and analysis</li>
+                <li><code>dash-bootstrap-components</code> - Responsive UI components</li>
+                <li><code>numpy</code> - Numerical computing</li>
+                <li><code>flask-caching</code> - Performance optimization</li>
             </ul>
         </div>
         
-        <!-- 6. GITHUB REPOSITORY LINK -->
+        <!-- 7. GITHUB REPOSITORY LINK -->
         <div class="section">
             <h2>🔗 GitHub Repository</h2>
-            <p>All source code and documentation:</p>
+            <p>All source code, documentation, and project files are available on GitHub:</p>
             <a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard" 
                class="btn" target="_blank">
-               📂 View Complete Code on GitHub
+               📂 View Complete Source Code on GitHub
             </a>
             
-            <h3>Direct Links:</h3>
+            <h3>Direct Links to Key Files:</h3>
             <ul>
-                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/DashboardFinal.py">📄 Dashboard Code (DashboardFinal.py)</a></li>
-                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/requirements.txt">📋 Requirements (requirements.txt)</a></li>
-                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/README.md">📖 Documentation (README.md)</a></li>
+                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/DashboardFinal.py" target="_blank">📄 DashboardFinal.py</a> - Main dashboard application</li>
+                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/requirements.txt" target="_blank">📋 requirements.txt</a> - Python dependencies</li>
+                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/README.md" target="_blank">📖 README.md</a> - Complete documentation</li>
+                <li><a href="https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard/blob/main/.gitignore" target="_blank">🔒 .gitignore</a> - Git ignore rules</li>
             </ul>
             
             <h3>How to Run Locally:</h3>
-            <pre style="background: #2d2d2d; color: white; padding: 15px; border-radius: 5px;">
-# Clone repository
+            <pre>
+# 1. Clone the repository
 git clone https://github.com/Ahmed-Fraz-Awan/Sales-Intelligence-Dashboard.git
 
-# Install dependencies
+# 2. Navigate to project folder
+cd Sales-Intelligence-Dashboard
+
+# 3. Install dependencies
 pip install -r requirements.txt
 
-# Run dashboard
+# 4. Run the dashboard
 python DashboardFinal.py
 
-# Open browser: http://localhost:8050</pre>
+# 5. Open your browser and visit:
+# http://localhost:8050
+
+# The dashboard will start automatically!</pre>
+        </div>
+        
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+            <h3>📞 Contact Information</h3>
+            <p><strong>Ahmed Fraz Awan</strong> | 📧 u2022065@giki.edu.pk</p>
+            <p><strong>Abdullah Atif</strong> | 📧 u2022066@giki.edu.pk</p>
+            <p><em>For questions, feedback, or collaboration opportunities</em></p>
         </div>
         
         <!-- FOOTER -->
         <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #667eea; color: #666;">
             <p>🎓 <strong>Academic Project</strong> • Developed by Ahmed Fraz Awan & Abdullah Atif • 2024</p>
-            <p><em>Sales Intelligence Dashboard with Machine Learning Integration</em></p>
+            <p><em>Sales Intelligence Dashboard with Machine Learning Integration | Ghulam Ishaq Khan Institute</em></p>
+            <p style="font-size: 14px; margin-top: 10px;">
+                This project demonstrates the integration of machine learning, data visualization, and web development 
+                for business intelligence applications.
+            </p>
         </div>
     </div>
+    
+    <script>
+        // Optional: Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
